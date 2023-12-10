@@ -1,7 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Responsiva</title>
+    <style>
+        #botonDescarga { display: none; }
+        #qrCode { display: none; }
+        @media only screen and (max-width: 600px) {
+            #botonDescarga { display: block; }
+            #qrCode { display: none; }
+        }
+        @media only screen and (min-width: 601px) {
+            #botonDescarga { display: none; }
+            #qrCode { display: block; }
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <button id="botonDescarga">Descargar</button>
+    <div id="qrCode">Aquí va el código QR</div>
+
+    <script>
+        const esDispositivoMovil = window.innerWidth <= 600;
+        const botonDescarga = document.getElementById('botonDescarga');
+        const qrCode = document.getElementById('qrCode');
+
+        if (esDispositivoMovil) {
+            botonDescarga.style.display = 'block';
+            qrCode.style.display = 'none';
+        } else {
+            botonDescarga.style.display = 'none';
+            qrCode.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
