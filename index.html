@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Web </title>
     <style>
-        #botonDescarga { display: none; }
-        #qrCode { display: none; }
-        @media only screen and (max-width: 600px) {
-            #botonDescarga { display: block; }
-            #qrCode { display: none; }
+        #botonDescarga {
+            display: none;
         }
+
+        #qrCode {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #botonDescarga {
+                display: block;
+            }
+
+            #qrCode {
+                display: none;
+            }
+        }
+
         @media only screen and (min-width: 601px) {
-            #botonDescarga { display: none; }
-            #qrCode { display: block; }
+            #botonDescarga {
+                display: none;
+            }
+
+            #qrCode {
+                display: block;
+            }
         }
     </style>
 </head>
+
 <body>
     <button id="botonDescarga">Descargar</button>
-    <div id="qrCode">Descarga</div>
-    <img src="qrcode-generado.png" alt="500px">
-
+    <div id="qrCode">Descarga
+        <img src="qrcode-generado.png" alt="500px">
+    </div>
     <script>
         const esDispositivoMovil = window.innerWidth <= 600;
         const botonDescarga = document.getElementById('botonDescarga');
@@ -36,4 +55,5 @@
         }
     </script>
 </body>
+
 </html>
