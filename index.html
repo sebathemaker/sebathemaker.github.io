@@ -4,8 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Web </title>
+    <title>Página Web</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; 
+        }
+
+        #contenedorQR {
+            background-color: #3498db; 
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
         #botonDescarga {
             display: none;
         }
@@ -37,10 +54,15 @@
 </head>
 
 <body>
-    <button id="botonDescarga">Descargar</button>
-    <div id="qrCode">Descarga
-        <img src="qrcode-generadoapk.png" alt="500px">
+    <div id="contenedorQR">
+        <h1>Mi Aplicación Móvil</h1>
+        <p>Descripción de la aplicación móvil.</p>
+        <button id="botonDescarga">Descargar</button>
+        <div id="qrCode">
+            <img src="qrcode-generadoapk.png" alt="Código QR">
+        </div>
     </div>
+
     <script>
         const esDispositivoMovil = window.innerWidth <= 600;
         const botonDescarga = document.getElementById('botonDescarga');
