@@ -58,16 +58,18 @@
 <body>
     <div id="contenedorQR">
         <h1>Mi Aplicación Móvil</h1>
-        <p>Descarga la aplicacion</p>
-        <a id="botonDescarga"
-            href="https://drive.google.com/file/d/11-EBHo1VSz_HpzPCF_-HCc3Ym_48J54p/view?usp=sharing"
-            target="_blank">Descargar</a>
+        <p>Descarga la aplicación</p>
+        <button id="botonDescarga" onclick="descargarApp()">Descargar</button>
         <div id="qrCode">
             <img src="qrcode-generadofinal.png" alt="Código QR">
         </div>
     </div>
 
     <script>
+        function descargarApp() {
+            window.location.href = "https://drive.google.com/file/d/11-EBHo1VSz_HpzPCF_-HCc3Ym_48J54p/view?usp=sharing";
+        }
+
         const esDispositivoMovil = window.innerWidth <= 600;
         const botonDescarga = document.getElementById('botonDescarga');
         const qrCode = document.getElementById('qrCode');
